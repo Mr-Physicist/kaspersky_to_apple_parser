@@ -20,10 +20,14 @@ def setup_logging(log_level: str = "INFO", log_file: Optional[Path] = None) -> N
         file_handler.setFormatter(logging.Formatter(log_format))
         handlers.append(file_handler)
 
+    # Set up basic configuration with appropriate logging level
     logging.basicConfig(
-        level=getattr(logging, log_level.upper()),
+        level=getattr(logging, log_level.upper(), logging.INFO),  # Default to INFO if invalid level is provided
         handlers=handlers
     )
+
+    logger = logging.getLogger()
+    logger.setLevel(getattr(logging, log_level.upper(), logging.INFO))  # Explicitly set the level
 
 def validate_entry(entry: Dict[str, str]) -> None:
     """Validate a single entry dictionary."""
@@ -32,10 +36,16 @@ def validate_entry(entry: Dict[str, str]) -> None:
         "Application": ["Application", "Login", "Password"]
     }
 
-    entry_type = "Website" if "Website name" in entry else "Application"
-    if entry_type not in required_fields:
+    # Determine the entry type based on the fields present
+    if "Website name" in entry:
+        entry_type = "Website"
+    elif "Application" in entry:
+        entry_type = "Application"
+    else:
+        # If neither, raise an Unknown entry type error
         raise ValidationError(f"Unknown entry type: {entry}")
 
+    # Check if required fields are present for the entry type
     missing_fields = [field for field in required_fields[entry_type]
                      if field not in entry or not entry[field]]
     
