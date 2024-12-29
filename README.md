@@ -14,7 +14,7 @@ A Python tool for converting Kaspersky password manager exports to Apple Passwor
 ## Installation
 
 ```bash
-pip install kaspersky-apple-converter
+pip install password-converter
 ```
 
 ## Usage
