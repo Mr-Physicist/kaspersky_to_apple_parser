@@ -1,0 +1,15 @@
+Website name: Login Test
+Website URL: https://test.es
+Login name: 
+Login: example@example.com
+Password: example2
+Comment: 
+
+---
+
+Website name: example.com
+Website URL: https://example.com
+Login name: 
+Login: example@example.com
+Password: example2
+Comment: 
