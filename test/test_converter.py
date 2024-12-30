@@ -1,4 +1,3 @@
-import pytest
 from pathlib import Path
 from typing import Dict
 from password_converter.converter import PasswordConverter, convert_file, convert_text

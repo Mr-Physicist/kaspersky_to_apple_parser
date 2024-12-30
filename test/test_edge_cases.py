@@ -1,6 +1,4 @@
-import pytest
 from password_converter.converter import convert_text
-from password_converter.exceptions import ConverterError
 
 def test_empty_input():
     result = convert_text("")
