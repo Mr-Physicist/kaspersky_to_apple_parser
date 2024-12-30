@@ -46,3 +46,7 @@ password-converter = "password_converter.converter:main"
 [tool.setuptools]
 package-dir = {"" = "src"}
 packages = ["password_converter"]
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+pythonpath = ["src"]
