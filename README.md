@@ -22,8 +22,8 @@ pip install password-converter
 ### Command Line
 
 ```bash
-python -m password_converter convert input.txt output.csv
-python -m password_converter convert input.txt output.csv --log-level DEBUG --log-file convert.log
+python -m password-converter input.txt output.csv
+python -m password-converter input.txt output.csv --log-level DEBUG --log-file convert.log
 ```
 
 ### Python API
