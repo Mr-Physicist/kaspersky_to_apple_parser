@@ -78,9 +78,11 @@ Comment:
 
 ## Output Format
 
+```
 Title,URL,Username,Password,Notes,OTPAuth
 Example Website (user@example.com),https://example.com,user@example.com,secretpassword123,My favorite website,
 Example App (user@example.com),,user@example.com,anotherpassword456,,
+```
 
 ## Development
 
