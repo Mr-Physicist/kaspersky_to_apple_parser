@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "password_converter"
-version = "0.2.5"
+version = "0.2.7"
 description = "Convert Kaspersky password manager exports to Apple Password format"
 readme = "README.md"
 authors = [{ name = "Daniel Lozano Gómez", email = "daniellg7@gmail.com" }]
