@@ -21,6 +21,8 @@ pip install password-converter
 
 ### Command Line
 
+The input.txt file is the file that is generated automatically with the Kaspersky password manager, and the output.csv is the file that is going to be generated with your passwords. You can import this .csv file directly into the Passwords app.
+
 ```bash
 python -m password-converter input.txt output.csv
 python -m password-converter input.txt output.csv --log-level DEBUG --log-file convert.log
